@@ -5,6 +5,7 @@ const router = express.Router();
 const passport = require('passport');
 
 const usersController = require('../controllers/users_controller');
+const videoController = require('../controllers/video_controller');
 
 // import the resume controller
 const resumeController = require('../controllers/resume_controller'); 
@@ -31,8 +32,17 @@ router.post('/uploadResume',
     resumeController.uploadResume // The controller function to handle the resume upload
 );
 
+
+
 router.get('/applicantresume/:id', resumeController.getResume);
 
+// Video routes
+router.post('/uploadVideo',
+    videoController.upload.single('video'), // Multer middleware for video upload
+    videoController.uploadVideo // The controller function to handle the video upload
+);
+
+router.get('/getVideo/:id', videoController.getVideo);
 
 router.get('/sign-out', usersController.destroySession);
 

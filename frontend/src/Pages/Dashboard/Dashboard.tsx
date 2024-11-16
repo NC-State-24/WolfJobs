@@ -31,12 +31,14 @@ const Dashboard = () => {
   const updateIsLoggedIn = useUserStore((state) => state.updateIsLoggedIn);
   const updateResume = useUserStore((state) => state.updateResume);
   const updateResumeId = useUserStore((state) => state.updateResumeId);
+  const updateVideoId = useUserStore((state) => state.updateVideoId);
 
   const role = useUserStore((state) => state.role);
   const managerId = useUserStore((state) => state.id);
 
   const updateJobList = useJobStore((state) => state.updateJobList);
   const jobList: Job[] = useJobStore((state) => state.jobList);
+  
 
   const updateApplicationList = useApplicationStore(
     (state) => state.updateApplicationList
@@ -72,6 +74,7 @@ const Dashboard = () => {
       updateIsLoggedIn(true);
       updateResume(userInfo.resume);
       updateResumeId(userInfo.resumeId);
+	    updateVideoId(userInfo.videoId);
     }
   }, []);
 
@@ -106,6 +109,7 @@ const Dashboard = () => {
       });
       setDisplayList(temp);
     } else if (role === "Applicant") {
+      
       const applicantsJobs: Application[] = applicationList.filter(
         (item) => item.applicantid
       );
@@ -205,7 +209,7 @@ const Dashboard = () => {
                   />
                 );
               })}
-            </div>
+           </div>
           </>
           <JobDetailView />
         </div>
@@ -232,7 +236,7 @@ const Dashboard = () => {
           <ChatBubbleIcon />
         </Fab>
       )}
-      {role === "Manager" && (
+    {role === "Manager" && (
         <div className="fixed p-4 bottom-3 right-3">
           <Button
             onClick={(e) => {

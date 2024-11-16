@@ -63,11 +63,24 @@ const userSchema = new mongoose.Schema(
       required: false,
       ref: 'Resume',
     },
+    video: {
+      type: String,
+      default: "",
+      ref: 'Video',
+    },
+	  videoId: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: false,
+      ref: 'Video',
+      default: null
+    }
   },
   {
     timestamps: true,
   }
 );
+userSchema.set('toJSON', { virtuals: true });
+userSchema.set('toObject', { virtuals: true });
 
 const User = mongoose.model("User", userSchema);
 

@@ -17,6 +17,7 @@ const Profile = () => {
   const gender = useUserStore((state) => state.gender);
   const hours = useUserStore((state) => state.hours);
   const resume = useUserStore((state) => state.resume);
+  const video = useUserStore((state) => state.video);
 
   const widthCard = "700px";
 
@@ -99,6 +100,11 @@ const Profile = () => {
                 <span className="text-lg">Resume: </span>
                 <span className="text-gray-500">{resume || " -- "}</span>
               </div>
+              <div>
+                <span className="text-lg">Video: </span>
+                <span className="text-gray-500">{video || " -- "}</span>
+              </div>
+
               {/* <div>
                 <span className="text-lg">Hours: </span>
                 <span className="text-gray-500">{hours || " -- "}</span>

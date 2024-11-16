@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config(); // Assuming you're using dotenv for environment variables
+const dbUrl = 'mongodb://127.0.0.1:27017/DevWolfJobs';
 
-const dbUrl = 'mongodb://127.0.0.1:27017/wolfjobs_development';
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 

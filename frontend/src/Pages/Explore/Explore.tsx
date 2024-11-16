@@ -52,6 +52,8 @@ const Explore = () => {
   const handleSearchChange = (event: any) => {
     setSearchTerm(event.target.value);
   };
+  
+  const updateVideoId = useUserStore((state) => state.updateVideoId);
 
   const handleSortChange = () => {
     setSortHighestPay(!sortHighestPay);
@@ -92,6 +94,7 @@ const Explore = () => {
       updateIsLoggedIn(true);
       updateResume(userInfo.resume);
       updateResumeId(userInfo.resumeId);
+	    updateVideoId(userInfo.videoId);
     }
   }, []);
 

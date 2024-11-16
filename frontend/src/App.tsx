@@ -17,10 +17,12 @@ import LandingPage from "./Pages/Auth/landingPage";
 import JobQuestionnaire from "./Pages/CreateJob/jobQuestionnaire";
 import JobPreview from "./Pages/CreateJob/jobPreview";
 import Resume from "./Pages/Resume/Resume";
+import Video from "./Pages/Video/Video";
 import Chat from "./Pages/Chat/Chat";
 import ResumeViewer from "./components/Resume/ResumeViewer";
 import Notifications from "./Pages/Notifications/Notifications";
 import JobEdit from "./components/Job/JobEdit";
+import VideoViewer from "./components/Video/VideoViewer";
 
 const App = () => {
   return (
@@ -104,6 +106,31 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/video"
+            element={
+              <ProtectedRoute>
+                <Video />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/videoviewer/:applicantId"
+            element={
+                <VideoViewer />
+            }
+          />
+          <Route
+            path="/video"
+            element={
+              <ProtectedRoute>
+                <Video />
+              </ProtectedRoute>
+            }
+          />
+
+
+
           <Route
             path="/notifications"
             element={

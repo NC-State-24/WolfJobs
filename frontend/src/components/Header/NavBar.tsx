@@ -32,7 +32,12 @@ const NavBar = () => {
         <nav className="text-sm font-semibold leading-6 text-slate-700 ">
           <ul className="flex space-x-8">
             {isLoggedIn && <NavBarItem link="/profile" text="Profile" />}
-            {isLoggedIn && role == "Applicant" && <NavBarItem link="/resume" text="Upload Resume" />}
+            {isLoggedIn && role === "Applicant" && (
+              <>
+                <NavBarItem link="/resume" text="Upload Resume" />
+                <NavBarItem link="/video" text="Upload Video" />
+              </>
+            )}
             {isLoggedIn && role === "Applicant" && <NavBarItem link="/notifications" text={`Notifications (${notificationCount})`} />}
             {isLoggedIn && <NavBarItem link="/logout" text="Log Out" />}
           </ul>

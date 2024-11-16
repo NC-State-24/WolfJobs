@@ -76,13 +76,21 @@ const JobScreening = (props: any) => {
                 {!!item?.applicantSkills && (
                   <div>Skills: {item.applicantSkills}</div>
                 )}
-                <div className="flex justify-center px-2 py-1 ml-2 border border-gray-300 rounded-md">
+                <div className="flex justify-center space-x-2 px-2 py-1 ml-2 border border-gray-300 rounded-md">
                   <a
                     href={`/resumeviewer/${item.applicantid}`}
                     className="text-red-500"
                   >
                     View Resume
                   </a>
+                  <span className="text-gray-300">|</span>
+                  <a
+                    href={`/videoviewer/${item.applicantid}`}
+                    className="text-blue-500"
+                  >
+                    View Video
+                  </a>
+                </div>
                 </div>
               </div>
               <div className="flex flex-row">
@@ -116,7 +124,6 @@ const JobScreening = (props: any) => {
               </div>
             </div>
           </div>
-        </div>
       ))}
     </>
   );
