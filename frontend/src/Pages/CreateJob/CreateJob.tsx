@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { AiFillCheckCircle } from "react-icons/ai";
 import {
@@ -12,6 +12,8 @@ import {
   TextField,
 } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { fetchSuggestedPay } from "../../api/ai";
+import { toast } from "react-toastify";
 
 type FormValues = {
   role: string;
@@ -39,6 +41,34 @@ const CreateJob = () => {
       description: "",
     },
   });
+
+  // Watch specific fields
+  const role = form.watch("role");
+  const location = form.watch("location");
+  const [debouncedRole, setDebouncedRole] = useState(role);
+  const [debouncedLocation, setDebouncedLocation] = useState(location);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedRole(role);
+    }, 500); // Adjust the delay (in ms) as needed
+    return () => clearTimeout(handler); // Cleanup timeout
+  }, [role]);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedLocation(location);
+    }, 500); // Adjust the delay (in ms) as needed
+    return () => clearTimeout(handler); // Cleanup timeout
+  }, [location]);
+
+  useEffect(() => {
+    if (debouncedRole && debouncedLocation) {
+      fetchSuggestedPay(debouncedRole, debouncedLocation).then((data) => {
+        toast.success(data)
+      })
+    }
+  }, [debouncedRole, debouncedLocation]);
 
   const { register, handleSubmit, formState } = form;
   const { errors } = formState;

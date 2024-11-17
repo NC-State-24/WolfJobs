@@ -8,3 +8,4 @@ export const fetchMessageURL = `${API_ROOT}/message/fetchMessages`;
 export const fetchListingChatsURL = `${API_ROOT}/message/fetchListingChats`;
 export const createMessageURL = `${API_ROOT}/message/createMessage`;
 export const aiQuestionsURL = `${API_ROOT}/ai/generateQuestions`;
+export const fetchSuggestedPayURL = `${API_ROOT}/ai/fetchSuggestedPay`;
