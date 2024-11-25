@@ -23,6 +23,7 @@ import ResumeViewer from "./components/Resume/ResumeViewer";
 import Notifications from "./Pages/Notifications/Notifications";
 import JobEdit from "./components/Job/JobEdit";
 import VideoViewer from "./components/Video/VideoViewer";
+import Appointment from "./Pages/Appointment/Appointment";
 
 const App = () => {
   return (
@@ -160,6 +161,14 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Chat />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/appointment"
+            element={
+              <ProtectedRoute>
+                <Appointment />
               </ProtectedRoute>
             }
           />
