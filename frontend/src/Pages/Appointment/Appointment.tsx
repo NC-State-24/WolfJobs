@@ -64,7 +64,7 @@ const Appointment = () => {
       await setAvailableSlots(response.data);
     } catch (error) {
       console.error("Error fetching slots:", error);
-      toast.error("Failed to fetch available slots.");
+      // toast.error("Failed to fetch available slots.");
     }
   };
 
@@ -76,7 +76,7 @@ const Appointment = () => {
       setBookedSlots(response.data);
     } catch (error) {
       console.error("Error fetching booked slots:", error);
-      toast.error("Failed to fetch booked slots.");
+      // toast.error("Failed to fetch booked slots.");
     }
   };
 
@@ -87,7 +87,7 @@ const Appointment = () => {
       setManagerSlots(response.data);
     } catch (error) {
       console.error("Error fetching manager slots:", error);
-      toast.error("Failed to fetch manager slots.");
+      // toast.error("Failed to fetch manager slots.");
     }
   };
 
@@ -232,38 +232,6 @@ const Appointment = () => {
                 )}
               </div>
             </Stack>
-
-            {/* Applicant: Search Booked Slots by Student ID
-            <div className="text-2xl translate-x-10 mt-8">Search Booked Slots</div>
-            <Stack spacing={2} width={600} className="m-4 mx-10">
-              <TextField
-                label="Student ID"
-                type="text"
-                value={applicantId}
-                onChange={(e) => setApplicantId(e.target.value)}
-                required
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => getAppointmentsByApplicant(applicantId)}
-              >
-                Search Slots
-              </Button>
-            </Stack>
-            <div className="slot-list mt-4">
-              {bookedSlots.length === 0 ? (
-                <p>No slots found for the given Student ID.</p>
-              ) : (
-                bookedSlots.map((slot) => (
-                  <div key={slot._id} className="slot-card">
-                    <p><strong>Date:</strong> {slot.date}</p>
-                    <p><strong>Time:</strong> {slot.startTime} - {slot.endTime}</p>
-                    <p><strong>Manager:</strong> {managerId}</p>
-                  </div>
-                ))
-              )}
-            </div> */}
           </>
         )}
       </div>
