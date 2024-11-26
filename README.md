@@ -120,6 +120,8 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 `pip install spacy scikit-learn`
 `python -m spacy download en_core_web_sm`
 
+- Create a .env file where you paste your GEMINI_API_KEY = "YOUR_KEY" for the job pay recommendation feature
+
 **Step 3: Backend Setup**
 
 - Open a terminal window and navigate to the backend directory by executing the command: _cd backend_
@@ -177,6 +179,15 @@ Your app is ready to be deployed!
 
 
 # Contributors
+## Iteration 4:
+  <table>
+  <tr>
+    <td align="center"><a href="https://github.com/katydu"><img src="https://avatars.githubusercontent.com/raghunandan-16" width="100px;" alt=""/><br /><b>Raghunandan Mante</b></a><br /></td>
+    <td align="center"><a href="https://github.com/shambu2k"><img src="https://avatars.githubusercontent.com/Haricharan0311" width="100px;" alt=""/><br /><b>Haricharan Bharathi</b></a><br /></td>
+    <td align="center"><a href="https://github.com/SiddhiKhairee"><img src="https://avatars.githubusercontent.com/GokulPrakashRamesh" width="100px;" alt=""/><br /><b>Gokul prakash Ramesh</b></a><br /></td>
+  </tr>
+</table>
+
   ## Iteration 3:
   <table>
   <tr>
