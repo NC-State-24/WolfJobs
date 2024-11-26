@@ -31,19 +31,15 @@
 
 # What's New:
 
-- New Chat Interface: Direct communication between applicants and recruiters!
+- Video Upload feature
 
-- Job Editing function: Recruiters right now can edit the jobs that are already created!
+- Job pay suggestion using AI
+
+- Appointment scheduling and management for subsequent contact between managers
+
+- Part time shift scheduling
 
 - Bug Fixes: Ensured unique emails for job applicants and recruiters.
-
-- Security Enhancement: adding salt and hashing to password, increase the safty of the password.
-
-- UI Revamp: Sleeker, user-friendly experience.
-
-- AI-Driven Question Suggestions: Tailored questions based on job description and required skill.
-  
-- Change skill and required skill to dropdownlist so the users and managers can easily select the skill-set they want and avoid strange answers.
 
 # About Us
 
@@ -108,7 +104,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 - Download and install the latest version of MongoDB from [MongoDB Official Website.](https://www.mongodb.com/try/download/community)
 - Make sure you have React version 18.0
 
-**Step 1: Clone the Repository from this [link](https://github.com/deepr41/WolfJobs.git)**
+**Step 1: Clone the Repository from this [link]([https://github.com/deepr41/WolfJobs.git](https://github.com/NC-State-24/WolfJobs))**
 
 **Step 2: AI Script Setup**
 
