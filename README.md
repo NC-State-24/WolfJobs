@@ -31,19 +31,15 @@
 
 # What's New:
 
-- New Chat Interface: Direct communication between applicants and recruiters!
+- Applicant video submission for screening
 
-- Job Editing function: Recruiters right now can edit the jobs that are already created!
+- Job pay suggestion using AI
+
+- Appointment scheduling and management for subsequent contact between managers
+
+-  Part-time job shifts tracking and management for employees and employers
 
 - Bug Fixes: Ensured unique emails for job applicants and recruiters.
-
-- Security Enhancement: adding salt and hashing to password, increase the safty of the password.
-
-- UI Revamp: Sleeker, user-friendly experience.
-
-- AI-Driven Question Suggestions: Tailored questions based on job description and required skill.
-  
-- Change skill and required skill to dropdownlist so the users and managers can easily select the skill-set they want and avoid strange answers.
 
 # About Us
 
@@ -108,7 +104,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 - Download and install the latest version of MongoDB from [MongoDB Official Website.](https://www.mongodb.com/try/download/community)
 - Make sure you have React version 18.0
 
-**Step 1: Clone the Repository from this [link](https://github.com/deepr41/WolfJobs.git)**
+**Step 1: Clone the Repository from this [link]([https://github.com/deepr41/WolfJobs.git](https://github.com/NC-State-24/WolfJobs))**
 
 **Step 2: AI Script Setup**
 
@@ -119,6 +115,8 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 `source ./bin/activate`
 `pip install spacy scikit-learn`
 `python -m spacy download en_core_web_sm`
+
+- Create a .env file where you paste your GEMINI_API_KEY = "YOUR_KEY" for the job pay recommendation feature
 
 **Step 3: Backend Setup**
 
@@ -163,20 +161,31 @@ Your app is ready to be deployed!
 
 **1. Email Service📧** - On getting selected/rejected to a job, the applicant should be getting an email about it.
 
-**2. Interview Video Submission** - Managers can request applicants to submit a video screening file and applicants can upload a video on their side of the portal.
+**2. Shift Management** - Add features to edit and update shifts.
 
-**3. Job Analysis🔍** – WolfJobs will provide the functionality of analysing various aspects of a job. Job Analysis based on various parameters using graphical representation will help in making prediction on which jobs are more preferred and for which jobs applicants have more inclination. Hiring managers can then decide what rewards and salary to be given to the applicants of that job. Even applicants will get to know, which job is being preferred among other applicants.
+**3. Job Analysis🔍** – Add features for managers to compare similar profiles.
 
 **4. Chatbot Integration🤖** – Our platform WolfJobs will also provide the functionality of Chatbot integrated with our website so that user can easily interact with the bot and get to know about various features of our web application and have a nice interactive experience.
 
-**5. Interview Appointment Scheduling📆** – WolfJobs will also provide the facility for the hiring manager to organize an interview appointment for the job based on applicant’s availability and convenient time uploaded by the hiring manager. Either of the users can upload their availability time in the G-sheet and using google calendar appointments can be organised.
+**5. Payslip generation** – Generate payslips bi-weekly based n the hours worked to easily so as to automate this process.
 
 **6. Candidate Matching Percentage** – WolfJobs applicant skill matching feature will include a percentage to how fit a candidate's skills are based on the job's required skills. Applicants will see a match percentage indicating how likely they are to get accepted and recieve an interview. 
 
 **7. Matching based on Resume** – WolfJobs applicants will be able to parse their resume and WolfJobs will extract key skills from the resume and compare it with required job skills to give candidates job matching status.
 
+**8. Session Management** - Improved session management for ease of logging in and out of users.
+
 
 # Contributors
+## Iteration 4:
+  <table>
+  <tr>
+    <td align="center"><a href="https://github.com/katydu"><img src="https://avatars.githubusercontent.com/raghunandan-16" width="100px;" alt=""/><br /><b>Raghunandan Mante</b></a><br /></td>
+    <td align="center"><a href="https://github.com/shambu2k"><img src="https://avatars.githubusercontent.com/Haricharan0311" width="100px;" alt=""/><br /><b>Haricharan Bharathi</b></a><br /></td>
+    <td align="center"><a href="https://github.com/SiddhiKhairee"><img src="https://avatars.githubusercontent.com/GokulPrakashRamesh" width="100px;" alt=""/><br /><b>Gokul prakash Ramesh</b></a><br /></td>
+  </tr>
+</table>
+
   ## Iteration 3:
   <table>
   <tr>
