@@ -5,6 +5,7 @@ const History = require("../../../models/history");
 const Job = require("../../../models/job");
 const Application = require("../../../models/application");
 const AuthOtp = require("../../../models/authOtp");
+const { Slot, Appointment } = require("../../../models/appointment")
 
 const nodemailer = require("nodemailer");
 
@@ -593,5 +594,131 @@ module.exports.verifyOtp = async function (req, res) {
     return res.json(500, {
       message: "Internal Server Error",
     });
+  }
+};
+
+module.exports.createSlot = async (req, res) => {
+  try {
+    const { recruiterId, date, startTime, endTime } = req.body;
+    const slot = new Slot({ recruiterId, date, startTime, endTime, isBooked: false });
+
+    await slot.save();
+    return res.status(201).json({ message: "Slot created successfully", slot });
+  } catch (error) {
+    console.error("Error in createSlot:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports.getAvailableSlots = async (req, res) => {
+  try {
+    const slots = await Slot.find({ isBooked: false });
+    if (slots.length === 0) {
+      return res.status(404).json({ message: "No available slots found" });
+    }
+    return res.status(200).json(slots);
+  } catch (error) {
+    console.error("Error in getAvailableSlots:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports.bookAppointment = async (req, res) => {
+  try {
+    const { slotId, applicantId, date, startTime, endTime } = req.body;
+
+    const slot = await Slot.findById(slotId);
+    if (!slot || slot.isBooked) {
+      return res.status(404).json({ error: "Slot not available" });
+    }
+
+    const managerId = slot.recruiterId;
+
+    const appointment = new Appointment({ slotId, applicantId, managerId, date, startTime, endTime });
+    slot.isBooked = true;
+
+    await slot.save();
+    await appointment.save();
+
+    return res.status(201).json({ message: "Appointment booked successfully", appointment });
+  } catch (error) {
+    console.error("Error in bookAppointment:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports.getManagerSlots = async (req, res) => {
+  try {
+    const { id } = req.params;
+    // console.log(id);
+    const slots = await Appointment.find({ recruiterId: id });
+
+    if (!slots || slots.length === 0) {
+      return res.status(404).json({ message: "No booked slots found for your created slots." });
+    }
+
+    return res.status(200).json(slots);
+  } catch (error) {
+    console.error("Error fetching manager slots:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+
+module.exports.getAppointmentsByApplicant = async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    const appointments = await Appointment.find({ applicantId: id })
+      .populate({
+        path: "slotId",
+        select: "date startTime endTime isBooked recruiterId",
+        populate: {
+          path: "recruiterId",
+          select: "name",
+        }
+      });
+
+    if (!appointments || appointments.length === 0) {
+      return res.status(404).json({ message: "No appointments found" });
+    }
+    return res.status(200).json(appointments);
+  } catch (error) {
+    console.error("Error in getAppointmentsByApplicant:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+// module.exports.getAppointmentsByApplicant = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const appointments = await Appointment.find({ applicantId: id }).populate("slotId");
+
+//     if (!appointments || appointments.length === 0) {
+//       return res.status(404).json({ message: "No appointments found" });
+//     }
+
+//     return res.status(200).json(appointments);
+//   } catch (error) {
+//     console.error("Error in getAppointmentsByApplicant:", error);
+//     return res.status(400).json({ error: error.message });
+//   }
+// };
+
+module.exports.updateAppointmentStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const appointment = await Appointment.findByIdAndUpdate(id, { status }, { new: true });
+
+    if (!appointment) {
+      return res.status(404).json({ error: "Appointment not found" });
+    }
+
+    return res.status(200).json({ message: "Appointment status updated", appointment });
+  } catch (error) {
+    console.error("Error in updateAppointmentStatus:", error);
+    return res.status(400).json({ error: error.message });
   }
 };

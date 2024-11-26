@@ -27,6 +27,12 @@ router.post("/verifyOTP", usersApi.verifyOtp);
 router.post("/rejectapplication", usersApi.rejectApplication);
 router.post("/closejob", jsonParser, usersApi.closeJob);
 router.post("/createapplication", jsonParser, usersApi.createApplication);
+router.get("/appointment/slots", usersApi.getAvailableSlots);
+router.post("/appointment/slots", jsonParser, usersApi.createSlot);
+router.post("/appointment/bookslots", jsonParser, usersApi.bookAppointment);
+router.get("/appointment/appointments/:id", usersApi.getAppointmentsByApplicant);
+router.put("/appointment/appointments/:id", usersApi.updateAppointmentStatus);
+router.get("/appointment/manager/:id", usersApi.getManagerSlots);
 
 
 module.exports = router;
