@@ -36,6 +36,8 @@ const NavBar = () => {
               <>
                 <NavBarItem link="/resume" text="Upload Resume" />
                 <NavBarItem link="/video" text="Upload Video" />
+                <NavBarItem link="/shift" text="Check In-Out"/>
+                
               </>
             )}
             {isLoggedIn && role === "Applicant" && <NavBarItem link="/notifications" text={`Notifications (${notificationCount})`} />}

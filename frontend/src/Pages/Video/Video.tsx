@@ -21,7 +21,6 @@ const Video: React.FC = () => {
         console.error("Error fetching existing video:", error);
       }
     };
-    console.log("reached here 3");
     checkExistingVideo();
   }, [userId]);
 

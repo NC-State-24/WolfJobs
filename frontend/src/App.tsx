@@ -18,6 +18,8 @@ import JobQuestionnaire from "./Pages/CreateJob/jobQuestionnaire";
 import JobPreview from "./Pages/CreateJob/jobPreview";
 import Resume from "./Pages/Resume/Resume";
 import Video from "./Pages/Video/Video";
+import Shift from "./Pages/Shift/Shift";
+import ShiftManagement from "./Pages/Shift/ShiftManagement";
 import Chat from "./Pages/Chat/Chat";
 import ResumeViewer from "./components/Resume/ResumeViewer";
 import Notifications from "./Pages/Notifications/Notifications";
@@ -128,9 +130,47 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-
-
-
+          
+          <Route
+            path="/shift"
+            element={
+              <ProtectedRoute>
+                <Shift />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/shift"
+            element={
+              <ProtectedRoute>
+                <Shift />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/shift"
+            element={
+              <ProtectedRoute>
+                <Shift />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/shifts"
+            element={
+              <ProtectedRoute>
+                <ShiftManagement />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/shifts"
+            element={
+              <ProtectedRoute>
+                <ShiftManagement />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/notifications"
             element={

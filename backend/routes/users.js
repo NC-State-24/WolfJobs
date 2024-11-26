@@ -6,6 +6,7 @@ const passport = require('passport');
 
 const usersController = require('../controllers/users_controller');
 const videoController = require('../controllers/video_controller');
+const shiftsController = require('../controllers/shifts_controller');
 
 // import the resume controller
 const resumeController = require('../controllers/resume_controller'); 
@@ -47,6 +48,19 @@ router.get('/getVideo/:id', videoController.getVideo);
 router.get('/sign-out', usersController.destroySession);
 
 router.get('/ping', resumeController.ping);
+
+const multer = require('multer');
+const upload = multer();
+
+
+// Route for checking in
+router.post('/checkin', upload.none(),shiftsController.checkIn);
+
+// Route for checking out
+router.post('/checkout', upload.none(), shiftsController.checkOut);
+router.get('/active/:id', shiftsController.getActiveShift);
+router.get('/myshifts/:id',shiftsController.getApplicantShifts);
+router.get('/allshifts',shiftsController.getAllShifts);
 
 
 
