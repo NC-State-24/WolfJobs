@@ -80,7 +80,7 @@ const JobEdit = () => {
     axios.post(url, body).then((res) => {
       if (res.status !== 200) {
         toast.error("Failed to update job");
-        return;
+        return; 
       }else{
         navigate("/dashboard");
         toast.success("Update success!");

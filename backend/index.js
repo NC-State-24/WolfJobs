@@ -67,3 +67,12 @@ app.listen(port, function (err) {
 
   console.log("Server is running on", port);
 });
+
+const cron = require('node-cron');
+const shiftsController = require('./controllers/shifts_controller');
+
+// Schedule the auto check-out task to run every day at 10:01 PM
+cron.schedule('1 22 * * *', () => {
+    console.log('Running auto check-out');
+    shiftsController.autoCheckOut();
+});
