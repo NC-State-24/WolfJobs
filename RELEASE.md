@@ -2,7 +2,7 @@
 
 ## WolfJobs Platform Release Notes  
 
-### Version: 1.0.0  
+### Version: 4.0.0  
 **Release Date:** November 26, 2024  
 
 ---
@@ -48,7 +48,7 @@ The first official release of **WolfJobs**, an AI-driven recruitment platform de
 
 ---
 
-### Upcoming Features (Planned for Version 1.1.0)  
+### Upcoming Features (Planned for Version 4.1.0)  
 - Advanced filtering and search capabilities for job seekers.  
 - AI-powered resume optimization tool for better profile visibility.  
 - Employer dashboards with enhanced analytics and insights.  
