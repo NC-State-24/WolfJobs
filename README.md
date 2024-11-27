@@ -16,7 +16,7 @@
 [![DOI](https://zenodo.org/badge/429097663.svg)](https://zenodo.org/badge/latestdoi/429097663)
 [![Release](https://img.shields.io/github/v/release/NC-State-24/wolfjobs)](https://gitHub.com/NC-State-24/Wolfjobs)
 <!-- ! [![codecov](https://codecov.io/gh/NC-State-24/WolfJobs/graph/badge.svg?token=RH472ZM4PT)](https://codecov.io/gh/NC-State-24/WolfJobs) -->
-![Code](https://img.shields.io/badge/codecov-92.1-blue?logo=codecov)
+[![codecov](https://codecov.io/gh/NC-State-24/WolfJobs/graph/badge.svg?token=RH472ZM4PT)](https://codecov.io/gh/NC-State-24/WolfJobs)
 
 <!-- ![Static Badge](https://img.shields.io/badge/any_text-i_like-blue) -->
 
