@@ -13,6 +13,19 @@ The first official release of **WolfJobs**, an AI-driven recruitment platform de
 ---
 
 ### Features  
+- **Video Upload**  
+  - Applicants can upload videos to show their skills and prove their case.
+ 
+- **AI based pay recommendation**  
+  - Managers creating a job can get an automatic update to see whether the pay they suggest will be on par with industry standards
+ 
+- **Appointment Scheduling**  
+  - Manager and Applicant can interact and create appointments
+
+- **Part-time shift Scheduling**  
+  - Part time shifts can be checked in and checked out by the applicant
+  - Manager can see which appicants start and finish theor part-time jobs respectively
+    
 - **User Authentication**  
   - Seamless sign-up and login functionality for job seekers and employers.  
   - Secure password handling with encryption.  
