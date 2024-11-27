@@ -15,7 +15,9 @@
 [![Top Language](https://img.shields.io/github/languages/top/NC-State-24/wolfjobs)](https://GitHub.com/NC-State-24/Wolfjobs/)
 [![DOI](https://zenodo.org/badge/429097663.svg)](https://zenodo.org/badge/latestdoi/429097663)
 [![Release](https://img.shields.io/github/v/release/NC-State-24/wolfjobs)](https://gitHub.com/NC-State-24/Wolfjobs)
+
 <!-- ! [![codecov](https://codecov.io/gh/NC-State-24/WolfJobs/graph/badge.svg?token=RH472ZM4PT)](https://codecov.io/gh/NC-State-24/WolfJobs) -->
+
 [![codecov](https://codecov.io/gh/NC-State-24/WolfJobs/graph/badge.svg?token=RH472ZM4PT)](https://codecov.io/gh/NC-State-24/WolfJobs)
 
 <!-- ![Static Badge](https://img.shields.io/badge/any_text-i_like-blue) -->
@@ -38,7 +40,7 @@
 
 - Appointment scheduling and management for subsequent contact between managers
 
--  Part-time job shifts tracking and management for employees and employers
+- Part-time job shifts tracking and management for employees and employers
 
 - Bug Fixes: Ensured unique emails for job applicants and recruiters.
 
@@ -79,23 +81,28 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 ## Manager Side
 
 ### Manager Sign Up and Login
+
 ![Manager Sign Up](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/ManagerSignupLoginin.gif)
 
 ### Edit Profile
+
 ![Edit Profile](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/ProfileEdit.gif)
 
 ### Add Job
+
 ![Add Job](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/AddJob.gif)
 
-###  Close Job
+### Close Job
+
 ![Close Job](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/CloseJob.gif)
 
 ### Screening
+
 ![Screening](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/screening.gif)
 
 ### Review & Accept Applications
-![Review Applications](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/Accept.gif)
 
+![Review Applications](https://github.com/SiddhiKhairee/WolfJobs/blob/master/GIFs/iteration3/Accept.gif)
 
 # Installation Instructions for Project Setup
 
@@ -105,7 +112,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 - Download and install the latest version of MongoDB from [MongoDB Official Website.](https://www.mongodb.com/try/download/community)
 - Make sure you have React version 18.0
 
-**Step 1: Clone the Repository from this [link]([https://github.com/deepr41/WolfJobs.git](https://github.com/NC-State-24/WolfJobs))**
+**Step 1: Clone the Repository from this [link](<[https://github.com/deepr41/WolfJobs.git](https://github.com/NC-State-24/WolfJobs)>)**
 
 **Step 2: AI Script Setup**
 
@@ -170,15 +177,16 @@ Your app is ready to be deployed!
 
 **5. Payslip generation** – Generate payslips bi-weekly based n the hours worked to easily so as to automate this process.
 
-**6. Candidate Matching Percentage** – WolfJobs applicant skill matching feature will include a percentage to how fit a candidate's skills are based on the job's required skills. Applicants will see a match percentage indicating how likely they are to get accepted and recieve an interview. 
+**6. Candidate Matching Percentage** – WolfJobs applicant skill matching feature will include a percentage to how fit a candidate's skills are based on the job's required skills. Applicants will see a match percentage indicating how likely they are to get accepted and recieve an interview.
 
 **7. Matching based on Resume** – WolfJobs applicants will be able to parse their resume and WolfJobs will extract key skills from the resume and compare it with required job skills to give candidates job matching status.
 
 **8. Session Management** - Improved session management for ease of logging in and out of users.
 
-
 # Contributors
+
 ## Iteration 4:
+
   <table>
   <tr>
     <td align="center"><a href="https://github.com/katydu"><img src="https://avatars.githubusercontent.com/raghunandan-16" width="100px;" alt=""/><br /><b>Raghunandan Mante</b></a><br /></td>
@@ -187,7 +195,8 @@ Your app is ready to be deployed!
   </tr>
 </table>
 
-  ## Iteration 3:
+## Iteration 3:
+
   <table>
   <tr>
     <td align="center"><a href="https://github.com/katydu"><img src="https://avatars.githubusercontent.com/katydu" width="100px;" alt=""/><br /><b>Min-Ting Tu</b></a><br /></td>
@@ -196,7 +205,8 @@ Your app is ready to be deployed!
   </tr>
 </table>
 
-  ## Iteration 1:
+## Iteration 1:
+
   <table>
   <tr>
     <td align="center"><a href="https://github.com/deepr41"><img src="https://avatars.githubusercontent.com/deepr41" width="100px;" alt=""/><br /><b>Deepak Rajendran</b></a></td>
@@ -204,12 +214,11 @@ Your app is ready to be deployed!
     <td align="center"><a href="https://github.com/Janhavi-23"><img src="https://avatars.githubusercontent.com/Janhavi-23" width="100px;" alt=""/><br /><b>Janhavi Pendse</b></a><br /></td>
     <td align="center"><a href="https://github.com/deepp2905"><img src="https://avatars.githubusercontent.com/deepp2905" width="100px;" alt=""/><br /><b>Deep Patel</b></a><br /></td>
 
-
-   
   </tr>
 </table>
 
 ## Iteration 2:
+
  <table>
   <tr>
     <td align="center"><a href="https://github.com/sanjitkverma"><img src="https://avatars.githubusercontent.com/sanjitkverma" width="100px;" alt=""/><br /><b>Sanjit Verma</b></a></td>
@@ -217,7 +226,5 @@ Your app is ready to be deployed!
     <td align="center"><a href="https://github.com/Harris-A-Khan"><img src="https://avatars.githubusercontent.com/Harris-A-Khan" width="100px;" alt=""/><br /><b>Harris Khan </b></a><br /></td>
     <td align="center"><a href="https://github.com/Sarvesh-Somasundaram"><img src="https://avatars.githubusercontent.com/Sarvesh-Somasundaram" width="100px;" alt=""/><br /><b>Sarvesh Somasundaram</b></a><br /></td>
 
-
-   
   </tr>
 </table>
