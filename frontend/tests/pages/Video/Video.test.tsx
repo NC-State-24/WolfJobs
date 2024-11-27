@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Video from './Video'; // Adjust the import path as necessary
+import Video from '../../../src/Pages/Video/Video'; // Adjust the import path as necessary
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
