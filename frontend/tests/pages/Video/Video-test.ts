@@ -1,0 +1,52 @@
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import Video from './Video'; // Adjust the import path as necessary
+import axios from 'axios';
+import { toast } from 'react-toastify';
+
+jest.mock('axios');
+jest.mock('react-toastify', () => ({ toast: jest.fn() }));
+
+describe('Video Component', () => {
+  const userId = '123'; // Mock user ID
+
+  beforeEach(() => {
+    // Mock implementation of axios.get for existing video
+    axios.get.mockResolvedValueOnce({ status: 200, data: 'mockVideo.mp4' });
+  });
+
+  test('renders the video upload component', () => {
+    render(<Video />);
+    const uploadButton = screen.getByText(/Upload Intro Video/i);
+    expect(uploadButton).toBeInTheDocument();
+  });
+
+  test('handles video upload', async () => {
+    const { container } = render(<Video />);
+    const file = new File(['video content'], 'mockVideo.mp4', { type: 'video/mp4' });
+    const dropzone = container.querySelector('input[type="file"]');
+    
+    fireEvent.change(dropzone, { target: { files: [file] }});
+    
+    const uploadButton = screen.getByText(/Upload Intro Video/i);
+    fireEvent.click(uploadButton);
+
+    expect(axios.post).toHaveBeenCalled();
+    expect(toast.success).toHaveBeenCalledWith('Intro Video Uploaded Successfully.');
+  });
+
+  test('shows error when upload fails', async () => {
+    axios.post.mockRejectedValueOnce(new Error('Upload failed'));
+    
+    const { container } = render(<Video />);
+    const file = new File(['video content'], 'mockVideo.mp4', { type: 'video/mp4' });
+    const dropzone = container.querySelector('input[type="file"]');
+    
+    fireEvent.change(dropzone, { target: { files: [file] }});
+    
+    const uploadButton = screen.getByText(/Upload Intro Video/i);
+    fireEvent.click(uploadButton);
+
+    expect(toast.error).toHaveBeenCalledWith(expect.stringContaining('Intro Video could not be uploaded'));
+  });
+});
