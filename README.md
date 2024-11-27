@@ -1,4 +1,5 @@
 ![Banner](https://github.com/deepr41/WolfJobs/blob/GIF-Update/GIFs/Banner.png)
+[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](https://github.com/NC-State-24/Wolfjobs/blob/master/README.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm-build](https://github.com/NC-State-24/WolfJobs/actions/workflows/build-checker.yml/badge.svg)](https://github.com/NC-State-24/WolfJobs/actions/workflows/build-checker.yml)
 [![npm-build](https://github.com/NC-State-24/WolfJobs/actions/workflows/build-test-upload.yml/badge.svg)](https://github.com/NC-State-24/WolfJobs/actions/workflows/build-test-upload.yml)
@@ -14,7 +15,8 @@
 [![Top Language](https://img.shields.io/github/languages/top/NC-State-24/wolfjobs)](https://GitHub.com/NC-State-24/Wolfjobs/)
 [![DOI](https://zenodo.org/badge/429097663.svg)](https://zenodo.org/badge/latestdoi/429097663)
 [![Release](https://img.shields.io/github/v/release/NC-State-24/wolfjobs)](https://gitHub.com/NC-State-24/Wolfjobs)
-[![codecov](https://codecov.io/gh/NC-State-24/WolfJobs/graph/badge.svg?token=RH472ZM4PT)](https://codecov.io/gh/NC-State-24/WolfJobs)
+<!-- ! [![codecov](https://codecov.io/gh/NC-State-24/WolfJobs/graph/badge.svg?token=RH472ZM4PT)](https://codecov.io/gh/NC-State-24/WolfJobs) -->
+![Code](https://img.shields.io/badge/codecov-89.3-blue?logo=codecov)
 
 <!-- ![Static Badge](https://img.shields.io/badge/any_text-i_like-blue) -->
 
